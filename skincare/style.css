@@ -73,10 +73,19 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #ff0000;
+  background-color: #000000;
   padding: 10px 0;
   z-index: 1000;
 }
+
+.logo {
+  margin-left: 30px;
+  margin-bottom: -25px;
+  color: white;
+  font-size: 0.9rem;
+
+}
+
 
 .nav-container {
   display: flex;
@@ -280,7 +289,7 @@ body {
 
 
 .content p {
-  margin: 8rem 0; /* 문단 간 여백 */
+  margin: 4rem 0; /* 문단 간 여백 */
 }
 
 .content .highlight {
@@ -337,12 +346,13 @@ body {
   max-width: 100%;
   height: auto;
   display: block;
+  margin-bottom: -2rem;
 }
 
 .caption {
   font-size: 1rem;
   color: #808080;
-  margin-top: 0.5rem;
+  margin-top: -1rem;
 }
 
 .yellow {
@@ -350,3 +360,169 @@ body {
   padding: 0 4px; /* 글자 양옆 여백 */
   font-weight: 700;
 }
+
+/* 1) 카드 중앙 정렬 확실히 */
+.product-card {
+  display: flex;            /* flex 컨테이너 */
+  align-items: center;      /* 세로 가운데 */
+  gap: 20px;
+  max-width: 520px;
+  width: 100%;
+  margin: 24px auto;        /* ← 가운데 */
+  padding: 14px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  background: #fff;
+  text-decoration: none;    /* 2) 기본 밑줄 제거 */
+}
+
+/* 혹시 상위에 text-align:center가 있어도 가운데로 */
+.content .product-card { margin-left:auto; margin-right:auto; }
+
+/* 4) 이미지 박스: 중앙 크롭 + 꽉 채우기(전역 img 규칙 이겨먹기) */
+.p-thumb{
+  width:170px;
+  height:170px;
+  overflow:hidden;
+  border-radius:6px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top: -22px;
+  margin-right: 4px;
+}
+
+.p-thumb img{
+  object-fit: cover;
+  object-position: bottom
+  display: block;
+}
+
+/* 2,3) 링크 밑줄 제거 + 제목 검은색 */
+.p-body{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:4px;
+  text-align:left;
+}
+
+.p-title, .p-title a{
+  color:#111;
+  text-decoration:none;
+  font-weight:600;
+  font-size: 0.95rem;
+}
+
+.p-desc{
+  color:#666;
+  font-size:.95rem;
+}
+
+.p-link{
+  color:#2b8a3e;
+  text-decoration:none;
+  font-size:.95rem;
+}
+
+/* 전역 규칙이 카드까지 먹지 않게 살짝 정리(선택사항) */
+.content > img { width:100%; height:auto; }  /* 페이지 본문 이미지에만 적용 */
+
+
+
+/* 링크 스타일(밑줄 제거 유지) */
+.p-title, .p-link { text-decoration: none; }
+.p-link { color: #2b8a3e; }
+
+
+.like-bar {
+  position: fixed; 
+  left:0; right:0; bottom:0;
+  height:44px;
+  background:#fff;
+  border-top:1px solid #e5e5e5;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 14px;
+  z-index:2000;
+}
+
+.lb-left {display:flex; align-items:center; gap:18px;}
+
+
+
+
+
+.like-btn {
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font: inherit;
+  color:#666;
+  background:none;
+  border:0;
+  padding:6px 4px;
+  cursor:pointer;
+  text-decoration:none;
+  font-size: 0.8rem;
+}
+
+.like-btn .heart {
+  color:#999;
+  transition: color .15s ease, transform .1s ease;
+}
+
+.like-btn.on .heart {color:#e02424;}
+.like-btn.on {color:#e02424;}
+.like-btn:active .heart{ transform: scale(0.95); }
+
+
+
+
+.comment-btn {
+  display:flex;
+  align-items:center;
+  gap:6px;
+  color:#666;
+  text-decoration:none;
+  line-height:1;
+  font-size: 0.8rem;
+}
+
+.comment-btn .bubble{
+  width:20px;
+  height:20px;
+  flex:0 0 20px;
+  aspect-ratio:1/1;
+  color:#999; /* 외곽선/점 색상 */
+  transition: color .15s ease, transform .1s ease;
+}
+
+.comment-btn:hover{ color:#111; }
+.comment-btn:hover .bubble{ color:#555; }
+.comment-btn:active .bubble{ transform:scale(.95); }
+
+
+
+
+.share-btn{ margin-left:auto; color:#888; }
+.lb-text{ font-size:.95rem; }
+
+/* 본문이 가려지지 않도록 여유(선택) */
+body{ padding-bottom:56px; }
+
+/* 모바일에서는 세로 스택 */
+@media (max-width: 520px) {
+  .product-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .p-thumb {
+    width: 100%;
+    height: 220px;
+    margin-top: 0px;
+  }   /* 모바일에서 보기 좋은 높이 */
+
+
+
