@@ -114,15 +114,15 @@ body {
 /* 페이지 헤더 전체 영역 */
 .page-header {
   max-width: 800px;
-  margin: 150px auto 40px auto; /* navbar 높이 고려해 위쪽 여백 줌 */
+  margin: 120px auto 40px auto; /* navbar 높이 고려해 위쪽 여백 줌 */
   padding: 0 20px;
 }
 
 /* 제목 */
 .main-title {
   font-family: 'Nanum Gothic';
-  font-size: 3.0rem;       /* 더 크게! */
-  font-weight: 400;         /* 일반 사이즈 */
+  font-size: 2.5rem;       /* 더 크게! */
+  font-weight: 500;         /* 일반 사이즈 */
   line-height: 1.3;
   margin-bottom: 30px;
   word-break: keep-all;     /* 줄바꿈 시 단어 안끊기도록 */
@@ -159,4 +159,194 @@ body {
 .author-date {
   font-size: 1rem;
   color: #aaa;
+}
+
+.profile-actions {
+  margin-left: auto; /* 오른쪽 끝으로 밀기 */
+  display: flex;
+  gap: 5px;
+}
+
+.profile-actions button {
+  padding: 4px 8px;
+  font-size: 0.9rem;
+  border: none;
+  background-color: white;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.btn-menu {
+  border: none;
+  background: none;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: default; /* 클릭 불가 느낌 */
+  padding: 0 4px;
+  color: #aaa;
+}
+
+.toast {
+  position: fixed;
+  top: 16px;            /* or bottom: 24px; */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+  z-index: 2000;
+}
+.toast.show {
+  opacity: 1;
+}
+
+
+/* 인트로 블록 */
+.intro {
+  max-width: 720px;
+  margin: 10px auto 40px;
+  text-align: center;
+}
+
+.intro .note {
+  font-size: 14px;          /* 작은 폰트 */
+  line-height: 1.7;
+  color: #108a3a;           /* 녹색 톤 */
+  margin-bottom: 50px;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.intro .emph {
+  font-size: 16px;          /* 한 단계 크고 */
+  line-height: 1.8;
+  color: #d60000;           /* 강조 빨강 */
+  font-weight: 600;         /* 살짝 굵게 */
+  margin: 10px 0 18px;
+  margin-bottom: 100px;
+  font-size: 1.3rem;
+}
+
+.intro-sep {
+  width: 40%;
+  margin: 10px auto 24px;
+  border: 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+.intro-img {
+  display: block;
+  max-width: 100%;
+  width: 720px;             /* 본문 너비 기준 */
+  height: auto;
+  border-radius: 6px;
+}
+
+/* 캡션이 필요하면 */
+.intro-caption {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #888;
+}
+
+/* 모바일 미세 조정 */
+@media (max-width: 768px) {
+  .intro .note { font-size: 13px; }
+  .intro .emph { font-size: 15px; }
+  .intro-sep { width: 55%; }
+}
+
+
+.content {
+  text-align: center;
+  line-height: 1.8;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+
+.divider {
+  border: none;
+  border-top: 1px solid #ddd; /* 얇은 회색 선 */
+  margin: 2rem auto; /* 위아래 여백 */
+  width: 800px;
+}
+
+
+.content p {
+  margin: 8rem 0; /* 문단 간 여백 */
+}
+
+.content .highlight {
+  color: red;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.content .italic {
+  font-style: italic;
+  color: #888;
+}
+
+
+.content-section {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.content-section p {
+  margin: 1.3rem 0;
+  line-height: 1.6;
+}
+
+.highlight {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: red;
+}
+
+.highlight-small {
+  font-size: 1.3rem;
+  color: red;
+}
+
+.arrow {
+  font-size: 2rem;
+  color: red;
+}
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.image-box {
+  text-align: center;
+}
+
+.image-box img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.caption {
+  font-size: 1rem;
+  color: #808080;
+  margin-top: 0.5rem;
+}
+
+.yellow {
+  background-color: rgb(255, 255, 82); /* 노란색 하이라이트 */
+  padding: 0 4px; /* 글자 양옆 여백 */
+  font-weight: 700;
 }
