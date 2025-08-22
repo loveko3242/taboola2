@@ -223,12 +223,11 @@ body {
 }
 
 .intro .note {
-  font-size: 14px;          /* 작은 폰트 */
-  line-height: 1.7;
-  color: #108a3a;           /* 녹색 톤 */
+  line-height: 2;
+  color: #0c5485;           /* 녹색 톤 */
   margin-bottom: 50px;
   margin-top: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
@@ -289,17 +288,13 @@ body {
 
 
 .content p {
-  margin: 4rem 0; /* 문단 간 여백 */
-}
-
-.content .highlight {
-  color: red;
-  font-weight: 700;
-  font-size: 1.8rem;
+  margin: 0 auto; /* 문단 간 여백 */
+  font-weight: 600;
 }
 
 .content .italic {
   font-style: italic;
+  font-size: 1.6rem;
   color: #888;
 }
 
@@ -316,7 +311,7 @@ body {
 }
 
 .highlight {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: bold;
   color: red;
 }
@@ -338,27 +333,39 @@ body {
   margin-top: 2rem;
 }
 
+
+.image-full {
+  text-align: center;
+}
+
+.image-full img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .image-box {
   text-align: center;
 }
 
 .image-box img {
-  max-width: 100%;
+  max-width: 60%;
   height: auto;
   display: block;
-  margin-bottom: -2rem;
 }
 
 .caption {
   font-size: 1rem;
+  font-weight: 500;
   color: #808080;
-  margin-top: -1rem;
 }
 
 .yellow {
   background-color: rgb(255, 255, 82); /* 노란색 하이라이트 */
-  padding: 0 4px; /* 글자 양옆 여백 */
+  margin: 0;
+  padding: 3px;
   font-weight: 700;
+  
 }
 
 /* 1) 카드 중앙 정렬 확실히 */
@@ -388,8 +395,7 @@ body {
   display:flex;
   align-items:center;
   justify-content:center;
-  margin-top: -22px;
-  margin-right: 4px;
+  margin-right: 6px;
 }
 
 .p-thumb img{
