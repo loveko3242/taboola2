@@ -215,10 +215,13 @@ body {
 }
 
 .right-text {
-  margin-left: auto;   /* 왼쪽 공간을 밀어냄 */
-  margin-right: 10px;  /* 버튼과 간격 */
+  margin-top: 8px;       /* 위쪽과 약간 간격 */
   font-size: 0.95rem;
   color: #444;
+  text-align: right;     /* 오른쪽 정렬 */
+  max-width: 800px;      /* 본문 너비에 맞춤 */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* 인트로 블록 */
