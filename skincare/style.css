@@ -214,6 +214,12 @@ body {
   opacity: 1;
 }
 
+.right-text {
+  margin-left: auto;   /* 왼쪽 공간을 밀어냄 */
+  margin-right: 10px;  /* 버튼과 간격 */
+  font-size: 0.95rem;
+  color: #444;
+}
 
 /* 인트로 블록 */
 .intro {
